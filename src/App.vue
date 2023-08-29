@@ -27,19 +27,14 @@ watch([valor1, valor2, operador], () => {
 </script>
 
 <template>
-  <div class="container">
-    <h1 class="fw-bold">Calculadora</h1>
-    <div class="row">
-      <div class="col">
-        <input
-          class="form-control"
-          v-model.number="valor1"
-          type="number"
-          @input="calculate"
-        />
+  <div>
+    <h1>Calculadora</h1>
+    <div>
+      <div>
+        <input v-model.number="valor1" type="number" @input="calculate" />
       </div>
-      <div class="col-md-1">
-        <select class="form-control" v-model="operador" @change="calculate">
+      <div>
+        <select v-model="operador" @change="calculate">
           <option value="+">+</option>
           <option value="-">-</option>
           <option value="*">*</option>
@@ -47,12 +42,7 @@ watch([valor1, valor2, operador], () => {
         </select>
       </div>
       <div>
-        <input
-          class="form-control"
-          v-model.number="valor2"
-          type="number"
-          @input="calculate"
-        />
+        <input v-model.number="valor2" type="number" @input="calculate" />
       </div>
     </div>
     <div>
